@@ -24,9 +24,16 @@ class News
 
     protected function beforeAction()
     {
-        echo 'Счетчик';
+       // echo 'Счетчик';
     }
 
+    protected function actionOne()
+    {
+        $id=(int)$_GET['id'];
+        $this->view->article=\App\Models\News::findById($id);
+        $this->view->display(__DIR__.'/../templates/one.php');
+    }
+    
     protected function actionIndex()
     {
         $this->view->title='My cool site';
