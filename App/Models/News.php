@@ -45,4 +45,16 @@ class News
         }
     }
 
+    public function __isset($k)
+    {
+        switch ($k) {
+            case 'author':
+                return !empty($this->author_id);
+                break;
+            default:
+                return false;
+        }
+    }
+
+
 }
