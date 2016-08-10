@@ -7,7 +7,7 @@ trait Singleton
 {
     protected static $instance;
     
-    protected function __constract() //Запретили прямое создание объекта
+    protected function __construct() //Запретили прямое создание объекта
     {
     }
     public static function instance() //Создали статический метод который возвращает нам объект, но в нем вводим контроль на тему того был ли раньше объект создан
